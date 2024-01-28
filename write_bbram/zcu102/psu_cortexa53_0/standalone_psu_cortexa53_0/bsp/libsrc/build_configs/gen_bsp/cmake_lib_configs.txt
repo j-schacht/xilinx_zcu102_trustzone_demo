@@ -1,0 +1,112 @@
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/user/Desktop/write_bbram/zcu102/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp
+-- Cache values
+// BOARD
+BOARD:STRING=zcu102
+
+// Choose the type of build, options are: None Debug Release RelWithDebInfo MinSizeRel ...
+CMAKE_BUILD_TYPE:STRING=
+
+// Install path prefix, prepended onto install directories.
+CMAKE_INSTALL_PREFIX:PATH=/usr/local
+
+// Size
+CMAKE_SIZE:FILEPATH=aarch64-none-elf-size
+
+// Specs file path for using CMAKE toolchain files
+CMAKE_SPECS_FILE:STRING=/home/user/Desktop/write_bbram/zcu102/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Xilinx.spec
+
+// Device Id
+DEVICE_ID:STRING=xczu9eg
+
+// The directory containing a CMake configuration file for INTC.
+INTC_DIR:PATH=INTC_DIR-NOTFOUND
+
+// Non Yocto embeddedsw FLOW
+NON_YOCTO:BOOL=ON
+
+// Number of slrs
+NUMBER_OF_SLRS:STRING=0x1
+
+// ASM FLAGS
+TOOLCHAIN_ASM_FLAGS:STRING= -O2 -DSDT
+
+// CXXFLAGS
+TOOLCHAIN_CXX_FLAGS:STRING= -O2 -DSDT
+
+// CFLAGS
+TOOLCHAIN_C_FLAGS:STRING= -O2 -DSDT
+
+// Flags used by compiler to generate dependency files
+TOOLCHAIN_DEP_FLAGS:STRING= -MMD -MP
+
+// Extra CFLAGS
+TOOLCHAIN_EXTRA_C_FLAGS:STRING= -g -Wall -Wextra -fno-tree-loop-distribute-patterns
+
+// Enables writing and reading of key management efuses for ZynqMp
+XILSKEY_access_key_manage_efuse:BOOL=OFF
+
+// Enables writing and reading of security critical efuses for ZynqMp
+XILSKEY_access_secure_crit_efuse:BOOL=OFF
+
+// Enables writing and reading of user efuses for ZynqMp
+XILSKEY_access_user_efuse:BOOL=OFF
+
+// IDCODE
+XILSKEY_device_id:STRING=0
+
+// IR length
+XILSKEY_device_irlen:STRING=0
+
+// Master SLR number
+XILSKEY_device_masterslr:STRING=0
+
+// Number of SLRs
+XILSKEY_device_numslr:STRING=1
+
+// Device series:
+	FPGA SERIES ZYNQ: XSK_FPGA_SERIES_ZYNQ
+	FPGA SERIES ULTRA: XSK_FPGA_SERIES_ULTRA
+	FPGA SERIES ULTRA PLUS: XSK_FPGA_SERIES_ULTRA_PLUS
+XILSKEY_device_series:STRING=XSK_FPGA_SERIES_ZYNQ
+
+// Override Sysmon configuration
+XILSKEY_override_sysmon_cfg:BOOL=ON
+
+// Enables API's to use PUF Helper Data efuses as user efuses
+XILSKEY_use_puf_hd_as_user_efuse:BOOL=OFF
+
+// Enable Interval Timer
+XILTIMER_en_interval_timer:BOOL=OFF
+
+// This parameter is used to select specific timer for sleep functionality
+XILTIMER_sleep_timer:STRING=psu_ttc_0
+
+// This parameter is used to select specific timer for tick functionality
+XILTIMER_tick_timer:STRING=psu_ttc_1
+
+// Archiver
+proc_archiver:STRING=aarch64-none-elf-gcc-ar
+
+// Assembler
+proc_assembler:STRING=aarch64-none-elf-gcc
+
+// Compiler
+proc_compiler:STRING=aarch64-none-elf-gcc
+
+// Compiler Flags
+proc_compiler_flags:STRING= -O2 -DSDT;-c
+
+// Extra Compiler Flags
+proc_extra_compiler_flags:STRING= -g -Wall -Wextra -fno-tree-loop-distribute-patterns
+
+// Enable hypervisor guest for EL1 Nonsecure
+standalone_hypervisor_guest:BOOL=OFF
+
+// stdin peripheral
+standalone_stdin:STRING=psu_uart_0
+
+// stdout peripheral
+standalone_stdout:STRING=psu_uart_0
+

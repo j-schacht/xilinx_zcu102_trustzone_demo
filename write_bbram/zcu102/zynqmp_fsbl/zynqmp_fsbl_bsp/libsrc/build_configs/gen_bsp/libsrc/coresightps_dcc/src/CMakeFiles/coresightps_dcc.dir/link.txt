@@ -1,0 +1,2 @@
+aarch64-none-elf-ar qc libcoresightps_dcc.a CMakeFiles/coresightps_dcc.dir/xcoresightpsdcc.c.obj
+/tools/Xilinx/Vitis/2023.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-ranlib libcoresightps_dcc.a

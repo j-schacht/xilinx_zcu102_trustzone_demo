@@ -1,0 +1,2 @@
+aarch64-none-elf-ar qc libresetps.a CMakeFiles/resetps.dir/xresetps_g.c.obj CMakeFiles/resetps.dir/xresetps.c.obj CMakeFiles/resetps.dir/xresetps_sinit.c.obj
+/tools/Xilinx/Vitis/2023.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-ranlib libresetps.a

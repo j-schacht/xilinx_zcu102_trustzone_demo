@@ -1,0 +1,6 @@
+//arch = zynqmp; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader, destination_cpu = a53-0]/home/user/Desktop/write_bbram/zcu102/export/zcu102/sw/boot/fsbl.elf
+	[destination_cpu = a53-0, exception_level = el-3]/home/user/Desktop/write_bbram/bbram_app/build/bbram_app.elf
+}

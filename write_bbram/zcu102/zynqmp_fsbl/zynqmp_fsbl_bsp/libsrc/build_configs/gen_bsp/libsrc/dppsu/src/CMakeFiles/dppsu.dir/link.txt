@@ -1,0 +1,2 @@
+aarch64-none-elf-ar qc libdppsu.a CMakeFiles/dppsu.dir/xdppsu_intr.c.obj CMakeFiles/dppsu.dir/xdppsu_edid.c.obj CMakeFiles/dppsu.dir/xdppsu_serdes.c.obj CMakeFiles/dppsu.dir/xdppsu_spm.c.obj CMakeFiles/dppsu.dir/xdppsu_selftest.c.obj CMakeFiles/dppsu.dir/xdppsu.c.obj CMakeFiles/dppsu.dir/xdppsu_g.c.obj CMakeFiles/dppsu.dir/xdppsu_sinit.c.obj
+/tools/Xilinx/Vitis/2023.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-ranlib libdppsu.a

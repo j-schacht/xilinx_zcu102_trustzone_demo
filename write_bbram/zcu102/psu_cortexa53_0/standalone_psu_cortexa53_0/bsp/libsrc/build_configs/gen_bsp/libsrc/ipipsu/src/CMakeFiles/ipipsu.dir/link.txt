@@ -1,0 +1,2 @@
+aarch64-none-elf-ar qc libipipsu.a CMakeFiles/ipipsu.dir/xipipsu_g.c.obj CMakeFiles/ipipsu.dir/xipipsu_sinit.c.obj CMakeFiles/ipipsu.dir/xipipsu.c.obj CMakeFiles/ipipsu.dir/xipipsu_buf.c.obj CMakeFiles/ipipsu.dir/xipipsu_helper.c.obj
+/tools/Xilinx/Vitis/2023.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-ranlib libipipsu.a

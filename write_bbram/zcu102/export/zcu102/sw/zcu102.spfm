@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sdx:platform xmlns:sdx="http://www.xilinx.com/sdx" sdx:library="sdx" sdx:name="zcu102" sdx:vendor="xilinx.com" sdx:version="1.0">
+    <sdx:description/>
+    <sdx:systemConfigurations sdx:defaultConfiguration="zcu102">
+        <sdx:configuration sdx:defaultProcessorGroup="standalone_psu_cortexa53_0" sdx:displayName="zcu102" sdx:name="zcu102" sdx:runtimes="cpp">
+            <sdx:description/>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:bif="" sdx:imageData="" sdx:name="standard" sdx:qemuArguments="qemu/pmu_args.txt:qemu/qemu_args.txt" sdx:readme=""/>
+                <sdx:image sdx:name="standalone_psu_cortexa53_0" sdx:qemuArguments="standalone_psu_cortexa53_0/qemu/pmu_args.txt:standalone_psu_cortexa53_0/qemu/qemu_args.txt"/>
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:cpuInstance="psu_cortexa53_0" sdx:cpuType="cortex-a53" sdx:displayName="standalone_psu_cortexa53_0" sdx:name="standalone_psu_cortexa53_0">
+                <sdx:os sdx:bspConfig="standalone_psu_cortexa53_0" sdx:displayName="standalone_psu_cortexa53_0" sdx:name="standalone"/>
+            </sdx:processorGroup>
+        </sdx:configuration>
+    </sdx:systemConfigurations>
+</sdx:platform>

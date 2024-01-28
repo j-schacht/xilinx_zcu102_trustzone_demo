@@ -1,0 +1,2 @@
+aarch64-none-elf-ar qc libddrcpsu.a CMakeFiles/ddrcpsu.dir/xddrcpsu.c.obj CMakeFiles/ddrcpsu.dir/xddrcpsu_sinit.c.obj CMakeFiles/ddrcpsu.dir/xddrcpsu_g.c.obj
+/tools/Xilinx/Vitis/2023.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-ranlib libddrcpsu.a

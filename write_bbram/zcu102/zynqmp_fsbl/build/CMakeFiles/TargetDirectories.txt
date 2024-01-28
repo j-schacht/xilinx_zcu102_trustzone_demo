@@ -1,0 +1,3 @@
+/home/user/Desktop/write_bbram/zcu102/zynqmp_fsbl/build/CMakeFiles/fsbl.elf.dir
+/home/user/Desktop/write_bbram/zcu102/zynqmp_fsbl/build/CMakeFiles/edit_cache.dir
+/home/user/Desktop/write_bbram/zcu102/zynqmp_fsbl/build/CMakeFiles/rebuild_cache.dir

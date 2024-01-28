@@ -1,0 +1,2 @@
+aarch64-none-elf-ar qc libclockps.a CMakeFiles/clockps.dir/xclockps_mux.c.obj CMakeFiles/clockps.dir/xclockps_divider.c.obj CMakeFiles/clockps.dir/xclockps_gate.c.obj CMakeFiles/clockps.dir/xclockps_sinit.c.obj CMakeFiles/clockps.dir/xclockps_g.c.obj CMakeFiles/clockps.dir/xclockps.c.obj CMakeFiles/clockps.dir/xclockps_fixedfactor.c.obj CMakeFiles/clockps.dir/xclockps_pll.c.obj
+/tools/Xilinx/Vitis/2023.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-ranlib libclockps.a

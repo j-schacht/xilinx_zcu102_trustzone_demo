@@ -1,0 +1,56 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "tcf-debug",
+      "request": "launch",
+      "name": "bbram_app_app_hw_1",
+      "debugType": "baremetal-zu",
+      "attachToRunningTargetOptions": {
+        "targetSetupMode": "standalone",
+        "executeScript": true,
+        "scriptPath": ""
+      },
+      "autoAttachProcessChildren": false,
+      "target": {
+        "targetConnectionId": "Local",
+        "peersIniPath": "../../../.peers.ini",
+        "context": "ZUPlus"
+      },
+      "targetSetup": {
+        "resetSystem": true,
+        "programDevice": true,
+        "enableRPUSplitMode": false,
+        "resetAPU": false,
+        "resetRPU": false,
+        "bitstreamFile": "",
+        "zuInitialization": {
+          "isFsbl": true,
+          "usingFSBL": {
+            "initWithFSBL": true,
+            "fsblFile": "${workspaceFolder}/zcu102/export/zcu102/sw/boot/fsbl.elf",
+            "fsblExitSymbol": "XFsbl_Exit"
+          },
+          "usingPsuInit": {
+            "runPsuInit": true,
+            "plPowerup": false,
+            "psuInitTclFile": "${workspaceFolder}/bbram_app/_ide/psinit/psu_init.tcl"
+          }
+        },
+        "downloadElf": [
+          {
+            "core": "psu_cortexa53_0",
+            "resetProcessor": true,
+            "elfFile": "${workspaceFolder}/bbram_app/build/bbram_app.elf",
+            "stopAtEntry": false
+          }
+        ],
+        "crossTriggerBreakpoints": {
+          "isSelected": false,
+          "breakpoints": []
+        }
+      },
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}

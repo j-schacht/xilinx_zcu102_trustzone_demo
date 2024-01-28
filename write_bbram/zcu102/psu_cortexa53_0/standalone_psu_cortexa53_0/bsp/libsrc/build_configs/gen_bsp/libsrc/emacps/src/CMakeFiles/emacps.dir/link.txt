@@ -1,0 +1,2 @@
+aarch64-none-elf-ar qc libemacps.a CMakeFiles/emacps.dir/xemacps_g.c.obj CMakeFiles/emacps.dir/xemacps_hw.c.obj CMakeFiles/emacps.dir/xemacps_control.c.obj CMakeFiles/emacps.dir/xemacps.c.obj CMakeFiles/emacps.dir/xemacps_bdring.c.obj CMakeFiles/emacps.dir/xemacps_sinit.c.obj CMakeFiles/emacps.dir/xemacps_intr.c.obj
+/tools/Xilinx/Vitis/2023.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-ranlib libemacps.a

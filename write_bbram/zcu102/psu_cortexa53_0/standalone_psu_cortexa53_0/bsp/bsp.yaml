@@ -1,0 +1,491 @@
+sdt: hw_artifacts/psu_cortexa53_0_baremetal.dts
+family: ZynqMP
+path: /home/user/Desktop/write_bbram/zcu102/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+os: standalone
+os_info:
+  standalone:
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/lib/bsp/standalone_v9_0
+os_config:
+  standalone:
+    standalone_hypervisor_guest:
+      name: standalone_hypervisor_guest
+      permission: read_write
+      type: boolean
+      value: 'false'
+      default: 'false'
+      options:
+      - 'true'
+      - 'false'
+      description: Enable hypervisor guest for EL1 Nonsecure
+    standalone_stdin:
+      name: standalone_stdin
+      permission: read_write
+      type: string
+      value: psu_uart_0
+      default: psu_uart_0
+      options:
+      - None
+      - psu_uart_0
+      - psu_uart_1
+      - psu_coresight_0
+      description: stdin peripheral
+    standalone_stdout:
+      name: standalone_stdout
+      permission: read_write
+      type: string
+      value: psu_uart_0
+      default: psu_uart_0
+      options:
+      - None
+      - psu_uart_0
+      - psu_uart_1
+      - psu_coresight_0
+      description: stdout peripheral
+toolchain_file: cortexa53_toolchain.cmake
+specs_file: Xilinx.spec
+proc: psu_cortexa53_0
+proc_config:
+  psu_cortexa53_0:
+    proc_archiver:
+      name: proc_archiver
+      permission: readonly
+      type: string
+      value: aarch64-none-elf-gcc-ar
+      default: aarch64-none-elf-gcc-ar
+      options: []
+      description: Archiver
+    proc_assembler:
+      name: proc_assembler
+      permission: readonly
+      type: string
+      value: aarch64-none-elf-gcc
+      default: aarch64-none-elf-gcc
+      options: []
+      description: Assembler
+    proc_compiler:
+      name: proc_compiler
+      permission: readonly
+      type: string
+      value: aarch64-none-elf-gcc
+      default: aarch64-none-elf-gcc
+      options: []
+      description: Compiler
+    proc_compiler_flags:
+      name: proc_compiler_flags
+      permission: readonly
+      type: string
+      value: ' -O2 -DSDT;-c'
+      default: ' -O2 -DSDT;-c'
+      options: []
+      description: Compiler Flags
+    proc_extra_compiler_flags:
+      name: proc_extra_compiler_flags
+      permission: read_write
+      type: string
+      value: ' -g -Wall -Wextra -fno-tree-loop-distribute-patterns'
+      default: ' -g -Wall -Wextra -fno-tree-loop-distribute-patterns'
+      options: []
+      description: Extra Compiler Flags
+template: empty_application
+compiler_flags: ''
+include_folder: include
+lib_folder: lib
+libsrc_folder: libsrc
+drv_info:
+  psu_acpu_gic:
+    driver: scugic
+    ip_name: psu_acpu_gic
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/scugic_v5_2
+  psu_adma_0:
+    driver: zdma
+    ip_name: psu_adma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/zdma_v1_17
+  psu_adma_1:
+    driver: zdma
+    ip_name: psu_adma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/zdma_v1_17
+  psu_adma_2:
+    driver: zdma
+    ip_name: psu_adma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/zdma_v1_17
+  psu_adma_3:
+    driver: zdma
+    ip_name: psu_adma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/zdma_v1_17
+  psu_adma_4:
+    driver: zdma
+    ip_name: psu_adma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/zdma_v1_17
+  psu_adma_5:
+    driver: zdma
+    ip_name: psu_adma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/zdma_v1_17
+  psu_adma_6:
+    driver: zdma
+    ip_name: psu_adma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/zdma_v1_17
+  psu_adma_7:
+    driver: zdma
+    ip_name: psu_adma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/zdma_v1_17
+  psu_afi_0: None
+  psu_afi_1: None
+  psu_afi_2: None
+  psu_afi_3: None
+  psu_afi_4: None
+  psu_afi_5: None
+  psu_afi_6: None
+  psu_ams:
+    driver: sysmonpsu
+    ip_name: psu_ams
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/sysmonpsu_v2_9
+  psu_apm_0:
+    driver: axipmon
+    ip_name: psu_apm
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/axipmon_v6_10
+  psu_apm_1:
+    driver: axipmon
+    ip_name: psu_apm
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/axipmon_v6_10
+  psu_apm_2:
+    driver: axipmon
+    ip_name: psu_apm
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/axipmon_v6_10
+  psu_apm_5:
+    driver: axipmon
+    ip_name: psu_apm
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/axipmon_v6_10
+  psu_apu: None
+  psu_can_1:
+    driver: canps
+    ip_name: psu_can
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/canps_v3_7
+  psu_cci_gpv: None
+  psu_cci_reg: None
+  psu_coresight_0:
+    driver: coresightps_dcc
+    ip_name: psu_coresight_0
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/coresightps_dcc_v1_9
+  psu_crf_apb:
+    driver: resetps
+    ip_name: psu_crf_apb
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/resetps_v1_6
+  psu_crl_apb:
+    driver: clockps
+    ip_name: psu_crl_apb
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/clockps_v1_5
+  psu_csu_0: None
+  psu_csudma:
+    driver: csudma
+    ip_name: psu_csudma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/csudma_v1_14
+  psu_ddr_phy: None
+  psu_ddr_qos_ctrl: None
+  psu_ddr_xmpu0_cfg: None
+  psu_ddr_xmpu1_cfg: None
+  psu_ddr_xmpu2_cfg: None
+  psu_ddr_xmpu3_cfg: None
+  psu_ddr_xmpu4_cfg: None
+  psu_ddr_xmpu5_cfg: None
+  psu_ddrc_0:
+    driver: ddrcpsu
+    ip_name: psu_ddrc
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/ddrcpsu_v1_5
+  psu_dp:
+    driver: dppsu
+    ip_name: psu_dp
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/dppsu_v1_7
+  psu_dpdma:
+    driver: dpdma
+    ip_name: psu_dpdma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/dpdma_v1_5
+  psu_efuse: None
+  psu_ethernet_3:
+    driver: emacps
+    ip_name: psu_ethernet
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/emacps_v3_19
+  psu_fpd_gpv: None
+  psu_fpd_slcr: None
+  psu_fpd_slcr_secure: None
+  psu_fpd_xmpu_cfg: None
+  psu_fpd_xmpu_sink: None
+  psu_gdma_0:
+    driver: zdma
+    ip_name: psu_gdma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/zdma_v1_17
+  psu_gdma_1:
+    driver: zdma
+    ip_name: psu_gdma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/zdma_v1_17
+  psu_gdma_2:
+    driver: zdma
+    ip_name: psu_gdma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/zdma_v1_17
+  psu_gdma_3:
+    driver: zdma
+    ip_name: psu_gdma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/zdma_v1_17
+  psu_gdma_4:
+    driver: zdma
+    ip_name: psu_gdma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/zdma_v1_17
+  psu_gdma_5:
+    driver: zdma
+    ip_name: psu_gdma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/zdma_v1_17
+  psu_gdma_6:
+    driver: zdma
+    ip_name: psu_gdma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/zdma_v1_17
+  psu_gdma_7:
+    driver: zdma
+    ip_name: psu_gdma
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/zdma_v1_17
+  psu_gpio_0:
+    driver: gpiops
+    ip_name: psu_gpio
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/gpiops_v3_12
+  psu_gpu: None
+  psu_i2c_0:
+    driver: iicps
+    ip_name: psu_i2c
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/iicps_v3_18
+  psu_i2c_1:
+    driver: iicps
+    ip_name: psu_i2c
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/iicps_v3_18
+  psu_iou_scntr: None
+  psu_iou_scntrs: None
+  psu_iousecure_slcr: None
+  psu_iouslcr_0: None
+  psu_ipi_0:
+    driver: ipipsu
+    ip_name: psu_ipi
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/ipipsu_v2_14
+  psu_lpd_slcr: None
+  psu_lpd_slcr_secure: None
+  psu_lpd_xppu: None
+  psu_lpd_xppu_sink: None
+  psu_mbistjtag: None
+  psu_ocm: None
+  psu_ocm_xmpu_cfg: None
+  psu_pcie:
+    driver: pciepsu
+    ip_name: psu_pcie
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/pciepsu_v1_6
+  psu_pcie_attrib_0: None
+  psu_pcie_dma: None
+  psu_pcie_high1: None
+  psu_pcie_high2: None
+  psu_pcie_low: None
+  psu_pmu_global_0: None
+  psu_qspi_0:
+    driver: qspipsu
+    ip_name: psu_qspi
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/qspipsu_v1_18
+  psu_qspi_linear_0: None
+  psu_r5_0_atcm_global: None
+  psu_r5_0_btcm_global: None
+  psu_r5_1_atcm_global: None
+  psu_r5_1_btcm_global: None
+  psu_r5_tcm_ram_global: None
+  psu_rpu: None
+  psu_rsa: None
+  psu_rtc:
+    driver: rtcpsu
+    ip_name: psu_rtc
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/rtcpsu_v1_13
+  psu_sata: None
+  psu_sd_1:
+    driver: sdps
+    ip_name: psu_sd
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/sdps_v4_2
+  psu_serdes: None
+  psu_siou: None
+  psu_smmu_gpv: None
+  psu_smmu_reg: None
+  psu_ttc_0:
+    driver: ttcps
+    ip_name: psu_ttc
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/ttcps_v3_18
+  psu_ttc_1:
+    driver: ttcps
+    ip_name: psu_ttc
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/ttcps_v3_18
+  psu_ttc_2:
+    driver: ttcps
+    ip_name: psu_ttc
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/ttcps_v3_18
+  psu_ttc_3:
+    driver: ttcps
+    ip_name: psu_ttc
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/ttcps_v3_18
+  psu_uart_0:
+    driver: uartps
+    ip_name: psu_uart
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/uartps_v3_13
+  psu_uart_1:
+    driver: uartps
+    ip_name: psu_uart
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/uartps_v3_13
+  psu_usb_0: None
+  psu_usb_xhci_0:
+    driver: usbpsu
+    ip_name: psu_usb_xhci
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/usbpsu_v1_14
+  psu_wdt_0:
+    driver: wdtps
+    ip_name: psu_wdt
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/wdtps_v3_6
+  psu_wdt_1:
+    driver: wdtps
+    ip_name: psu_wdt
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/XilinxProcessorIPLib/drivers/wdtps_v3_6
+lib_info:
+  xiltimer:
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/lib/sw_services/xiltimer_v1_3
+  xilskey:
+    path: /tools/Xilinx/Vitis/2023.2/data/embeddedsw/lib/sw_services/xilskey_v7_5
+    examples:
+      xilskey_efuse_example.c:
+      - xilskey_input.h
+      xilskey_efuseps_zynqmp_example.c:
+      - xilskey_efuseps_zynqmp_input.h
+      xilskey_bbramps_zynqmp_example.c: []
+      xilskey_bbram_ultrascale_example.c:
+      - xilskey_bbram_ultrascale_input.h
+      xilskey_puf_registration_example.c:
+      - xilskey_puf_registration.h
+      xilskey_puf_regeneration_example.c: []
+lib_config:
+  xiltimer:
+    XILTIMER_en_interval_timer:
+      name: XILTIMER_en_interval_timer
+      permission: read_write
+      type: boolean
+      value: 'false'
+      default: 'false'
+      options:
+      - 'true'
+      - 'false'
+      description: Enable Interval Timer
+    XILTIMER_sleep_timer:
+      name: XILTIMER_sleep_timer
+      permission: read_write
+      type: string
+      value: psu_ttc_0
+      default: psu_ttc_0
+      options:
+      - Default
+      - psu_ttc_0
+      - psu_ttc_1
+      - psu_ttc_2
+      - psu_ttc_3
+      description: This parameter is used to select specific timer for sleep functionality
+    XILTIMER_tick_timer:
+      name: XILTIMER_tick_timer
+      permission: read_write
+      type: string
+      value: psu_ttc_1
+      default: psu_ttc_1
+      options:
+      - None
+      - psu_ttc_0
+      - psu_ttc_1
+      - psu_ttc_2
+      - psu_ttc_3
+      description: This parameter is used to select specific timer for tick functionality
+  xilskey:
+    XILSKEY_access_key_manage_efuse:
+      name: XILSKEY_access_key_manage_efuse
+      permission: read_write
+      type: boolean
+      value: 'false'
+      default: 'false'
+      options:
+      - 'true'
+      - 'false'
+      description: Enables writing and reading of key management efuses for ZynqMp
+    XILSKEY_access_secure_crit_efuse:
+      name: XILSKEY_access_secure_crit_efuse
+      permission: read_write
+      type: boolean
+      value: 'false'
+      default: 'false'
+      options:
+      - 'true'
+      - 'false'
+      description: Enables writing and reading of security critical efuses for ZynqMp
+    XILSKEY_access_user_efuse:
+      name: XILSKEY_access_user_efuse
+      permission: read_write
+      type: boolean
+      value: 'false'
+      default: 'false'
+      options:
+      - 'true'
+      - 'false'
+      description: Enables writing and reading of user efuses for ZynqMp
+    XILSKEY_device_id:
+      name: XILSKEY_device_id
+      permission: read_write
+      type: integer
+      value: '0'
+      default: '0'
+      options: []
+      description: IDCODE
+    XILSKEY_device_irlen:
+      name: XILSKEY_device_irlen
+      permission: read_write
+      type: integer
+      value: '0'
+      default: '0'
+      options: []
+      description: IR length
+    XILSKEY_device_masterslr:
+      name: XILSKEY_device_masterslr
+      permission: read_write
+      type: integer
+      value: '0'
+      default: '0'
+      options: []
+      description: Master SLR number
+    XILSKEY_device_numslr:
+      name: XILSKEY_device_numslr
+      permission: read_write
+      type: integer
+      value: '1'
+      default: '1'
+      options: []
+      description: Number of SLRs
+    XILSKEY_device_series:
+      name: XILSKEY_device_series
+      permission: read_write
+      type: string
+      value: XSK_FPGA_SERIES_ZYNQ
+      default: XSK_FPGA_SERIES_ZYNQ
+      options:
+      - XSK_FPGA_SERIES_ZYNQ
+      - XSK_FPGA_SERIES_ULTRA
+      - XSK_FPGA_SERIES_ULTRA_PLUS
+      description: "\tFPGA SERIES ULTRA PLUS: XSK_FPGA_SERIES_ULTRA_PLUS"
+    XILSKEY_override_sysmon_cfg:
+      name: XILSKEY_override_sysmon_cfg
+      permission: read_write
+      type: boolean
+      value: 'true'
+      default: 'true'
+      options:
+      - 'true'
+      - 'false'
+      description: Override Sysmon configuration
+    XILSKEY_use_puf_hd_as_user_efuse:
+      name: XILSKEY_use_puf_hd_as_user_efuse
+      permission: read_write
+      type: boolean
+      value: 'false'
+      default: 'false'
+      options:
+      - 'true'
+      - 'false'
+      description: Enables API's to use PUF Helper Data efuses as user efuses

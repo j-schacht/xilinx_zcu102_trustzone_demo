@@ -1,0 +1,2 @@
+aarch64-none-elf-ar qc libxilpm.a CMakeFiles/xilpm.dir/zynqmp/client/common/pm_api_sys.c.obj CMakeFiles/xilpm.dir/zynqmp/client/common/pm_callbacks.c.obj CMakeFiles/xilpm.dir/zynqmp/client/common/pm_clock.c.obj CMakeFiles/xilpm.dir/zynqmp/client/common/pm_cfg_obj.c.obj CMakeFiles/xilpm.dir/zynqmp/client/apu/pm_client.c.obj
+/tools/Xilinx/Vitis/2023.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-ranlib libxilpm.a

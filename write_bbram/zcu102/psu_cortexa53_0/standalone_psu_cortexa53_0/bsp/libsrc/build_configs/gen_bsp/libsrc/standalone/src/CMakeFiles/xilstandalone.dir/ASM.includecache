@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/Desktop/write_bbram/zcu102/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/gcc/asm_vectors.S
+bspconfig.h
+/home/user/Desktop/write_bbram/zcu102/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/gcc/bspconfig.h
+
+/home/user/Desktop/write_bbram/zcu102/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/gcc/boot.S
+bspconfig.h
+/home/user/Desktop/write_bbram/zcu102/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/gcc/bspconfig.h
+xparameters.h
+/home/user/Desktop/write_bbram/zcu102/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/gcc/xparameters.h
+xil_errata.h
+/home/user/Desktop/write_bbram/zcu102/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/gcc/xil_errata.h
+
+/home/user/Desktop/write_bbram/zcu102/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/gcc/xil-crt0.S
+bspconfig.h
+/home/user/Desktop/write_bbram/zcu102/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/gcc/bspconfig.h
+xparameters.h
+/home/user/Desktop/write_bbram/zcu102/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/gcc/xparameters.h
+
+/home/user/Desktop/write_bbram/zcu102/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/platform/ZynqMP/gcc/translation_table.S
+bspconfig.h
+/home/user/Desktop/write_bbram/zcu102/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/platform/ZynqMP/gcc/bspconfig.h
+xparameters.h
+/home/user/Desktop/write_bbram/zcu102/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/platform/ZynqMP/gcc/xparameters.h
+xmem_config.h
+/home/user/Desktop/write_bbram/zcu102/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/platform/ZynqMP/gcc/xmem_config.h
+
+include/bspconfig.h
+xmem_config.h
+include/xmem_config.h
+xparameters_ps.h
+include/xparameters_ps.h
+
+include/xil_errata.h
+
+include/xmem_config.h
+
+include/xparameters_ps.h
+

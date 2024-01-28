@@ -1,0 +1,2 @@
+aarch64-none-elf-ar qc libwdtps.a CMakeFiles/wdtps.dir/xwdtps_selftest.c.obj CMakeFiles/wdtps.dir/xwdtps_g.c.obj CMakeFiles/wdtps.dir/xwdtps_sinit.c.obj CMakeFiles/wdtps.dir/xwdtps.c.obj
+/tools/Xilinx/Vitis/2023.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-ranlib libwdtps.a

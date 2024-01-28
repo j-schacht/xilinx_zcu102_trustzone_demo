@@ -1,0 +1,2 @@
+aarch64-none-elf-ar qc libvideo_common.a CMakeFiles/video_common.dir/xvidc.c.obj CMakeFiles/video_common.dir/xvidc_edid.c.obj CMakeFiles/video_common.dir/xvidc_edid_ext.c.obj CMakeFiles/video_common.dir/xvidc_parse_edid.c.obj CMakeFiles/video_common.dir/xvidc_timings_table.c.obj
+/tools/Xilinx/Vitis/2023.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-ranlib libvideo_common.a

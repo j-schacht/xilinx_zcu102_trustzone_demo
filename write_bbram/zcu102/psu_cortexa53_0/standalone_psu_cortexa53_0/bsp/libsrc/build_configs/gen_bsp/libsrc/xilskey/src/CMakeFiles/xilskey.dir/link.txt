@@ -1,0 +1,2 @@
+aarch64-none-elf-ar qc libxilskey.a CMakeFiles/xilskey.dir/xilskey_eps_zynqmp.c.obj CMakeFiles/xilskey.dir/xilskey_utils.c.obj CMakeFiles/xilskey.dir/xilskey_eps_zynqmp_puf.c.obj CMakeFiles/xilskey.dir/xilskey_bbramps_zynqmp.c.obj
+/tools/Xilinx/Vitis/2023.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-ranlib libxilskey.a
