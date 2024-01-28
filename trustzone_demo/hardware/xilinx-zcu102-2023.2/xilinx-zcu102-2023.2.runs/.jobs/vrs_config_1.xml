@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="project_1_axi_vip_1_0_synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/project_1_axi_vip_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="project_1_auto_us_0_synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/project_1_auto_us_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="project_1_zynq_ultra_ps_e_0_0_synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/project_1_zynq_ultra_ps_e_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="project_1_clk_wiz_0_0_synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/project_1_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="project_1_proc_sys_reset_6_0_synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/project_1_proc_sys_reset_6_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="project_1_proc_sys_reset_5_0_synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/project_1_proc_sys_reset_5_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="project_1_proc_sys_reset_3_0_synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/project_1_proc_sys_reset_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="project_1_proc_sys_reset_4_0_synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/project_1_proc_sys_reset_4_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="project_1_proc_sys_reset_2_0_synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/project_1_proc_sys_reset_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="project_1_proc_sys_reset_0_0_synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/project_1_proc_sys_reset_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="project_1_proc_sys_reset_1_0_synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/project_1_proc_sys_reset_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="project_1_auto_us_1_synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/project_1_auto_us_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="project_1_auto_us_0_synth_1"/>
+	</Run>
+	<Run Id="project_1_auto_pc_0_synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/project_1_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="project_1_axi_vip_0_0_synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/project_1_axi_vip_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="project_1_axi_vip_1_0_synth_1"/>
+	</Run>
+	<Run Id="project_1_axi_register_slice_0_0_synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/project_1_axi_register_slice_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="project_1_axi_intc_0_0_synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/project_1_axi_intc_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/tmp/tmp.hlf3HLCa6y/temp/hwflow/hwflow_project_1/project_1.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="project_1_axi_vip_1_0_synth_1"/>
+		<Parent Id="project_1_auto_us_0_synth_1"/>
+		<Parent Id="project_1_zynq_ultra_ps_e_0_0_synth_1"/>
+		<Parent Id="project_1_clk_wiz_0_0_synth_1"/>
+		<Parent Id="project_1_proc_sys_reset_6_0_synth_1"/>
+		<Parent Id="project_1_proc_sys_reset_5_0_synth_1"/>
+		<Parent Id="project_1_proc_sys_reset_3_0_synth_1"/>
+		<Parent Id="project_1_proc_sys_reset_4_0_synth_1"/>
+		<Parent Id="project_1_proc_sys_reset_2_0_synth_1"/>
+		<Parent Id="project_1_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="project_1_proc_sys_reset_1_0_synth_1"/>
+		<Parent Id="project_1_auto_us_1_synth_1"/>
+		<Parent Id="project_1_auto_pc_0_synth_1"/>
+		<Parent Id="project_1_axi_vip_0_0_synth_1"/>
+		<Parent Id="project_1_axi_register_slice_0_0_synth_1"/>
+		<Parent Id="project_1_axi_intc_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.ignorePathLengthChecks" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+

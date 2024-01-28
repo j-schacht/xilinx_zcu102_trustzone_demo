@@ -1,0 +1,137 @@
+the_ROM_image:
+{
+
+    /* --- general authentication settings --- */
+
+    /* use first primary public key; 
+     * use spk-efuse register to check if secondary public key has been revoked;
+     * use SPK ID = 0, since no secondary public key has been revoked yet */
+    [auth_params] ppk_select=0; spk_select=spk-efuse; spk_id=0x00000000
+
+    /* path to primary secret file. only the public key will be included in the resulting image. */
+    [pskfile] keys/primary.pem
+
+    /* path to secondary secret file. this will be used to sign and verify the boot header. 
+     * only the public key will be included in the resulting image. for some reason, the boot 
+     * header must use the same key pair as the FSBL. */
+    [sskfile] keys/secondary_fsbl.pem
+
+    /* enable authentication, but do not check the PPK with the hash stored in the eFuse. this
+     * makes it possible to test authentication without having to blow the RSA_EN fuse. */
+    [fsbl_config] bh_auth_enable
+    
+
+    /* --- first stage bootloader settings --- */
+	[
+        bootloader,                                         /* mark this as the FSBL */
+        destination_cpu         = a53-0,                    /* shall be executed on the Cortex-A53 CPU */
+        exception_level         = el-3,                     /* exception level 3 = secure monitor mode */
+
+        authentication          = rsa,                      /* must be verified using RSA */
+        spk_select              = spk-efuse,                /* use spk-efuse register to check for SPK revocation */
+        spk_id                  = 0x00000000,               /* same SPK ID is used for all SPKs, so they can be revoked all at once */
+        sskfile                 = keys/secondary_fsbl.pem   /* for some reason, the FSBL must use the same key pair as the boot header */
+
+    ] images/linux/zynqmp_fsbl.elf                          /* path to the FSBL executable */
+	
+
+    /* --- PMU firmware settings --- */
+    [
+        pmufw_image                                         /* mark this as the PMU firmware */
+
+        /* pmufw_image does not support authentication. however, it will be signed along with
+         * the FSBL, if authentication is enabled for the FSBL. */
+
+    ] images/linux/pmufw.elf                                /* path to the PMU firmware executable */
+	
+
+    /* --- FPGA bitstream settings --- */
+    [
+        destination_device      = pl,                       /* shall be applied to the FPGA */
+
+        authentication          = rsa,                      /* must be verified using RSA */
+        spk_select              = spk-efuse,                /* use spk-efuse register to check for SPK revocation */
+        spk_id                  = 0x00000000,               /* same SPK ID is used for all SPKs, so they can be revoked all at once */
+        sskfile                 = keys/secondary_bit.pem    /* use unique key pair for the FPGA bitstream */
+
+    ] images/linux/system.bit                               /* path to the FPGA bitstream */
+	
+
+    /* --- Arm Trusted Firmware settings --- */
+    [
+        /* ATF is an implementation of a secure monitor, which manages the TrustZone. */
+
+        trustzone               = secure,                   /* must only be executed in secure mode */
+        destination_cpu         = a53-0,                    /* shall be executed on the Cortex-A53 CPU */
+        exception_level         = el-3,                     /* exception level 3 = secure monitor mode */
+
+        authentication          = rsa,                      /* must be verified using RSA */
+        spk_select              = spk-efuse,                /* use spk-efuse register to check for SPK revocation */
+        spk_id                  = 0x00000000,               /* same SPK ID is used for all SPKs, so they can be revoked all at once */
+        sskfile                 = keys/secondary_atf.pem    /* use unique key pair for the ATF */
+
+    ] images/linux/bl31.elf                                 /* path to the ATF executable */
+	
+
+    /* --- device tree blob settings --- */
+    [
+        destination_cpu         = a53-0,                    /* shall be available on the Cortex-A53 CPU */
+        load                    = 0x00100000,               /* load partition to this memory address */
+
+        authentication          = rsa,                      /* must be verified using RSA */
+        spk_select              = spk-efuse,                /* use spk-efuse register to check for SPK revocation */
+        spk_id                  = 0x00000000,               /* same SPK ID is used for all SPKs, so they can be revoked all at once */
+        sskfile                 = keys/secondary_dtb.pem    /* use unique key pair for device tree blob */
+
+    ] images/linux/system.dtb                               /* path to the dtb file */
+	
+    
+    /* --- u-boot settings --- */
+    [
+        destination_cpu         = a53-0,                    /* shall be executed on the Cortex-A53 CPU */
+        exception_level         = el-2,                     /* exception level 2 = hypervisor mode */
+
+        authentication          = rsa,                      /* must be verified using RSA */
+        spk_select              = spk-efuse,                /* use spk-efuse register to check for SPK revocation */
+        spk_id                  = 0x00000000,               /* same SPK ID is used for all SPKs, so they can be revoked all at once */
+        sskfile                 = keys/secondary_ub.pem     /* use unique key pair for u-boot */
+
+    ] images/linux/u-boot.elf                               /* path to the u-boot executable */
+
+
+    /* --- FIT image settings --- */
+    [
+        /* The FIT image (image.ub) contains the linux kernel, device tree blob and initramfs and
+         * will be used by u-boot to get linux running. The FSBL shall load the image to a well- 
+         * defined address in RAM. The u-boot script (boot.scr) tells u-boot where to find the image. */
+
+        destination_cpu         = a53-0,                    /* shall be available on the Cortex-A53 CPU */
+        partition_owner         = fsbl,                     /* FSBL has to load this partition to RAM */
+        load                    = 0x11000000,               /* load partition to this memory address (will be called from boot.scr) */
+
+        authentication          = rsa,                      /* must be verified using RSA */
+        spk_select              = spk-efuse,                /* use spk-efuse register to check for SPK revocation */
+        spk_id                  = 0x00000000,               /* same SPK ID is used for all SPKs, so they can be revoked all at once */
+        sskfile                 = keys/secondary_fit.pem    /* use unique key pair for FIT image */
+
+    ] images/linux/image.ub                                 /* path to the FIT image */
+
+
+    /* --- u-boot script settings --- */
+    [
+        /* The u-boot script (boot.scr) shall be loaded to address 0x20000000 in RAM by the FSBL.
+         * This is the default address where u-boot will look for a script. Then, the script makes
+         * u-boot load the FIT image from a well-defined address. */
+
+        destination_cpu         = a53-0,                    /* shall be available on the Cortex-A53 CPU */
+        partition_owner         = fsbl,                     /* FSBL has to load this partition to RAM */
+        load                    = 0x20000000,               /* load partition to this memory address (u-boot will look here for a script) */
+
+        authentication          = rsa,                      /* must be verified using RSA */
+        spk_select              = spk-efuse,                /* use spk-efuse register to check for SPK revocation */
+        spk_id                  = 0x00000000,               /* same SPK ID is used for all SPKs, so they can be revoked all at once */
+        sskfile                 = keys/secondary_scr.pem    /* use unique key pair for u-boot script */
+    
+    ] boot.scr                                              /* path to the u-boot script */
+
+}

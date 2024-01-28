@@ -1,0 +1,53 @@
+the_ROM_image:
+{    
+
+    /* --- first stage bootloader settings --- */
+	[
+        bootloader,                                         /* mark this as the FSBL */
+        destination_cpu         = a53-0,                    /* shall be executed on the Cortex-A53 CPU */
+        exception_level         = el-3                      /* exception level 3 = secure monitor mode */
+
+    ] images/linux/zynqmp_fsbl.elf                          /* path to the FSBL executable */
+	
+
+    /* --- PMU firmware settings --- */
+    [
+        pmufw_image                                         /* mark this as the PMU firmware */
+
+    ] images/linux/pmufw.elf                                /* path to the PMU firmware executable */
+	
+
+    /* --- FPGA bitstream settings --- */
+    [
+        destination_device      = pl                        /* shall be applied to the FPGA */
+
+    ] images/linux/system.bit                               /* path to the FPGA bitstream */
+	
+
+    /* --- Arm Trusted Firmware settings --- */
+    [
+        /* ATF is an implementation of a secure monitor, which manages the TrustZone. */
+
+        trustzone               = secure,                   /* must only be executed in secure mode */
+        destination_cpu         = a53-0,                    /* shall be executed on the Cortex-A53 CPU */
+        exception_level         = el-3                      /* exception level 3 = secure monitor mode */
+
+    ] images/linux/bl31.elf                                 /* path to the ATF executable */
+	
+
+    /* --- device tree blob settings --- */
+    [
+        destination_cpu         = a53-0,                    /* shall be available on the Cortex-A53 CPU */
+        load                    = 0x00100000                /* load partition to this memory address */
+
+    ] images/linux/system.dtb                               /* path to the dtb file */
+	
+    
+    /* --- u-boot settings --- */
+    [
+        destination_cpu         = a53-0,                    /* shall be executed on the Cortex-A53 CPU */
+        exception_level         = el-2                      /* exception level 2 = hypervisor mode */
+
+    ] images/linux/u-boot.elf                               /* path to the u-boot executable */
+
+}
