@@ -22,7 +22,7 @@ This project demonstrates how a Trusted Execution Environment (TEE) can be set u
 1. Use Ubuntu 22.04 (recommended) or Debian 12.
 2. Install PetaLinux Tools 2023.2 to ```~/petalinux/2023.2```, as described in the [Documentation](doc_zcu102_tee_setup.pdf).
 3. Install Vitis Embedded 2023.1 and 2023.2, as described in the [Documentation](doc_zcu102_tee_setup.pdf).
-4. Clone this repository to ```~/petalinux/2023.2```.
+4. Clone this repository to ```~/petalinux```.
 5. Rename the directory:
 
     ```
