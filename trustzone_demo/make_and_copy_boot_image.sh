@@ -52,7 +52,7 @@ sudo rm -r -f ~/mnt/BOOT/*
 sudo rm -r -f ~/mnt/ROOT/*
 
 
-if false;   # use bootgen intead of petalinux-package
+if false;   # use bootgen instead of petalinux-package
 then
 
     # use petalinux-package to generate the boot image
