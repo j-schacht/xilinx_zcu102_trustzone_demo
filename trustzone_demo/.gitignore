@@ -10,5 +10,6 @@ pre-built/linux/
 *.log
 components/plnx_workspace
 components/yocto
+project-spec/configs/.Xil/
 system.dts
 keys/
