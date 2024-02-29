@@ -13,3 +13,4 @@ components/yocto
 project-spec/configs/.Xil/
 system.dts
 keys/
+nul
