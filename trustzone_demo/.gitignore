@@ -8,6 +8,7 @@ pre-built/linux/
 *.o
 *.jou
 *.log
+*.log.old
 components/plnx_workspace
 components/yocto
 project-spec/configs/.Xil/
